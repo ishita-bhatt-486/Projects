@@ -3,9 +3,9 @@
 
 import random
 
-while True:
+x = input('Roll the dice? (y/n): ').lower()
 
-    x = input('Roll the dice? (y/n): ').lower()
+while True:
 
     if x == 'y':
         num = input('Enter number of dice: ')
@@ -22,6 +22,8 @@ while True:
         else:
             print("Please enter a valid number.")
             continue
+
+        x = input('Would you like to roll the dice again? (y/n): ').lower()
 
     elif x == 'n':
         print('Thanks for playing!')
