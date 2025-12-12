@@ -1,4 +1,5 @@
 import random
+import sys
 
 # define the simulation function
 def run_monty_hall_simulation():
@@ -24,6 +25,7 @@ def run_monty_hall_simulation():
             print(f"Error: {e}. Please try again.")
 
     # setup
+    theoretical_rate = 2/3
     doors = [0, 1, 2]
     wins_stay = 0
     wins_switch = 0
@@ -49,9 +51,13 @@ def run_monty_hall_simulation():
         if switch_choice == prize_door:
             wins_switch += 1
 
+        if i % 1000 == 0: progress_bar(i, N)
+
     # Final probabilities
     prob_stay = wins_stay / N
     prob_switch = wins_switch / N
+
+    error_rate = abs(prob_switch - theoretical_rate) * 100
 
     # Display results
     print(f"""
@@ -65,6 +71,10 @@ def run_monty_hall_simulation():
         {'-'*30}
         Strategy: KEEP   | Wins: {wins_stay:<5} | {wins_stay/N:.2%}
         Strategy: SWITCH | Wins: {wins_switch:<5} | {wins_switch/N:.2%}
+        {'-'*30}
+        Theoretical Win Rate (Switch): {theoretical_rate:.2%}
+        Actual Win Rate (Switch):      {prob_switch:.2%}
+        ERROR RATE (Difference):       {error_rate:.4f}%        
         {'='*30}
     """)
     
@@ -73,6 +83,15 @@ def run_monty_hall_simulation():
         print("CONCLUSION: Switching is better.")
     else:
         print("CONCLUSION: Keeping the choice is better.")
+
+# progress bar function
+def progress_bar(current, total, bar_length=20):
+    percent = float(current) * 100 / total
+    arrow = '-' * int(percent/100 * bar_length - 1) + '>'
+    spaces = ' ' * (bar_length - len(arrow))
+    
+    sys.stdout.write(f"\rProgress: [{arrow+spaces}] {percent:.2f}%")
+    sys.stdout.flush()
 
 # Run the function
 if __name__ == "__main__":
