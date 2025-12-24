@@ -1,0 +1,114 @@
+Configuration	SmartGreenhouseSystem
+STM32CubeMX 	6.15.0
+Date	11/23/2025
+MCU	STM32F303RETx
+
+
+
+PERIPHERALS	MODES	FUNCTIONS	PINS
+ADC1	IN1 Differential	ADC1_IN1	PA0
+ADC1	IN1 Differential	ADC1_IN2	PA1
+ADC1	IN7 Differential	ADC1_IN7	PC1
+ADC1	IN7 Differential	ADC1_IN8	PC2
+ADC2	IN1 Differential	ADC2_IN1	PA4
+ADC2	IN1 Differential	ADC2_IN2	PA5
+ADC3	IN12 Single-ended	ADC3_IN12	PB0
+RCC	Crystal/Ceramic Resonator	RCC_OSC_IN	PF0-OSC_IN
+RCC	Crystal/Ceramic Resonator	RCC_OSC_OUT	PF1-OSC_OUT
+SYS	SysTick	SYS_VS_Systick	VP_SYS_VS_Systick
+TIM2	Internal Clock	TIM2_VS_ClockSourceINT	VP_TIM2_VS_ClockSourceINT
+TIM2	PWM Generation CH1	TIM2_CH1	PA15
+USART2	Asynchronous	USART2_RX	PA3
+USART2	Asynchronous	USART2_TX	PA2
+
+
+
+Pin Nb	PINs	FUNCTIONs	LABELs
+5	PF0-OSC_IN	RCC_OSC_IN	
+6	PF1-OSC_OUT	RCC_OSC_OUT	
+9	PC1	ADC1_IN7	
+10	PC2	ADC1_IN8	
+14	PA0	ADC1_IN1	
+15	PA1	ADC1_IN2	
+16	PA2	USART2_TX	
+17	PA3	USART2_RX	
+20	PA4	ADC2_IN1	
+21	PA5	ADC2_IN2	
+22	PA6	GPIO_Output	
+26	PB0	ADC3_IN12	
+29	PB10	GPIO_Output	
+41	PA8	GPIO_Output	
+42	PA9	GPIO_Output	
+43	PA10	GPIO_Output	
+50	PA15	TIM2_CH1	
+55	PB3	GPIO_Output	
+56	PB4	GPIO_Output	
+57	PB5	GPIO_Output	
+58	PB6	GPIO_Output	
+PERIPHERALS	MODES	FUNCTIONS	PINS
+ADC1	IN1 Differential	ADC1_IN1	PA0
+ADC1	IN1 Differential	ADC1_IN2	PA1
+ADC1	IN7 Differential	ADC1_IN7	PC1
+ADC1	IN7 Differential	ADC1_IN8	PC2
+ADC2	IN1 Differential	ADC2_IN1	PA4
+ADC2	IN1 Differential	ADC2_IN2	PA5
+ADC3	IN12 Single-ended	ADC3_IN12	PB0
+RCC	Crystal/Ceramic Resonator	RCC_OSC_IN	PF0-OSC_IN
+RCC	Crystal/Ceramic Resonator	RCC_OSC_OUT	PF1-OSC_OUT
+SYS	SysTick	SYS_VS_Systick	VP_SYS_VS_Systick
+TIM2	Internal Clock	TIM2_VS_ClockSourceINT	VP_TIM2_VS_ClockSourceINT
+TIM2	PWM Generation CH1	TIM2_CH1	PA15
+USART2	Asynchronous	USART2_RX	PA3
+USART2	Asynchronous	USART2_TX	PA2
+
+
+
+Pin Nb	PINs	FUNCTIONs	LABELs
+5	PF0-OSC_IN	RCC_OSC_IN	
+6	PF1-OSC_OUT	RCC_OSC_OUT	
+9	PC1	ADC1_IN7	
+10	PC2	ADC1_IN8	
+14	PA0	ADC1_IN1	
+15	PA1	ADC1_IN2	
+16	PA2	USART2_TX	
+17	PA3	USART2_RX	
+20	PA4	ADC2_IN1	
+21	PA5	ADC2_IN2	
+22	PA6	GPIO_Output	
+26	PB0	ADC3_IN12	
+29	PB10	GPIO_Output	
+41	PA8	GPIO_Output	
+42	PA9	GPIO_Output	
+43	PA10	GPIO_Output	
+50	PA15	TIM2_CH1	
+55	PB3	GPIO_Output	
+56	PB4	GPIO_Output	
+57	PB5	GPIO_Output	
+58	PB6	GPIO_Output	
+
+
+
+SOFTWARE PROJECT
+
+Project Settings : 
+Project Name : lets_try_again
+Project Folder : C:\Users\ishit\OneDrive\Desktop\arduino\lets_try_again
+Toolchain / IDE : STM32CubeIDE
+Firmware Package Name and Version : STM32Cube FW_F3 V1.11.5
+
+
+Code Generation Settings : 
+STM32Cube MCU packages and embedded software packs : Copy only the necessary library files
+Generate peripheral initialization as a pair of '.c/.h' files per peripheral : No
+Backup previously generated files when re-generating : No
+Delete previously generated files when not re-generated : Yes
+Set all free pins as analog (to optimize the power consumption) : No
+
+
+Toolchains Settings : 
+Compiler Optimizations : 
+
+
+
+
+
