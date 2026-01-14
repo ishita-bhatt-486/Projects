@@ -5,7 +5,10 @@ This repository contains the design and implementation of a 32-bit RISC-V Single
 
 Current Progress:
 ✅PC
+✅Instruction Memory
+✅Register file
 []Adders
+    ✅Adder 1
 []ALU
 []Memory
 []Other components
