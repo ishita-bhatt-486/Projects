@@ -11,4 +11,15 @@ Current Progress:
     ✅Adder 1
 []ALU
 []Memory
+[] Instruction Generator
+    ✅ I-Type
 []Other components
+
+# Types of Instructions
+
+* R-type - arithmetic operations
+* I-type - immediate operations
+* S-type - store instructions
+* B-type - branch instructions
+* U-type - upper immediate operations
+* J-type - jump instructions.

@@ -118,6 +118,10 @@ def resolve_collisions(balls):
                 nx = dx / distance
                 ny = dy / distance
 
+                # tangents
+                tx = -ny
+                ty = nx
+
                 # new positions
                 b1.x -= nx * (overlap / 2)
                 b1.y -= ny * (overlap / 2)
@@ -125,27 +129,23 @@ def resolve_collisions(balls):
                 b2.y += ny * (overlap / 2)
 
                 # new velocities
-                tx = -ny
-                ty = nx
 
-                dpTan1 = b1.dx * tx + b1.dy * ty
-                dpTan2 = b2.dx * tx + b2.dy * ty
+                tangent1_velocity = b1.dx * tx + b1.dy * ty
+                tangent2_velocity = b2.dx * tx + b2.dy * ty
 
-                dpNorm1 = b1.dx * nx + b1.dy * ny
-                dpNorm2 = b2.dx * nx + b2.dy * ny
+                normal1_velocity = b1.dx * nx + b1.dy * ny
+                normal2_velocity = b2.dx * nx + b2.dy * ny
 
-                m1 = (dpNorm1 * (b1.mass - b2.mass) + 2 * b2.mass * dpNorm2) / (b1.mass + b2.mass)
-                m2 = (dpNorm2 * (b2.mass - b1.mass) + 2 * b1.mass * dpNorm1) / (b1.mass + b2.mass)
+                normal1_velocity_new = ((normal1_velocity * (b1.mass - b2.mass) + 2 * b2.mass * normal2_velocity) / (b1.mass + b2.mass))* COLLISION_DAMPING
+                normal2_velocity_new = ((normal2_velocity * (b2.mass - b1.mass) + 2 * b1.mass * normal1_velocity) / (b1.mass + b2.mass)) * COLLISION_DAMPING
 
-                m1 *= COLLISION_DAMPING
-                m2 *= COLLISION_DAMPING
-
-                b1.dx = tx * dpTan1 + nx * m1
-                b1.dy = ty * dpTan1 + ny * m1
-                b2.dx = tx * dpTan2 + nx * m2
-                b2.dy = ty * dpTan2 + ny * m2
+                b1.dx = tx * tangent1_velocity + nx * normal1_velocity_new
+                b1.dy = ty * tangent1_velocity + ny * normal1_velocity_new
+                b2.dx = tx * tangent2_velocity + nx * normal2_velocity_new
+                b2.dy = ty * tangent2_velocity + ny * normal2_velocity_new
 
 def main():
+
     running = True
     balls = [Ball(400, 200, 30, BLUE)]
     add_button = Button(10, 10, 150, 50, "Add Ball")
