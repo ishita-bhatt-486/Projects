@@ -25,7 +25,7 @@ module ProgramCounter(
     input clk,
     input reset,
     input [31:0] PC_input,
-    output [31:0] PC_output
+    output reg [31:0] PC_output
     );
     
     always @(posedge clk or posedge reset)

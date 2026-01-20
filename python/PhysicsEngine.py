@@ -1,6 +1,5 @@
 # Physics Engine
 
-from turtle import distance
 import pygame
 import random
 import math

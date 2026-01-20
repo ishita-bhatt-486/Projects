@@ -20,10 +20,3 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Adder1(
-    input [32:0] from_PC,
-    output [32:0] out_adder1
-    );
-    
-    assign out_adder1 = 4+from_PC;
-endmodule
