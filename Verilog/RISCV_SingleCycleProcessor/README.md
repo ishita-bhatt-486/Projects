@@ -9,10 +9,11 @@ Current Progress:
 ✅Register file
 []Adders
     ✅Adder 1
-[]ALU
+✅ALU
+✅Control Unit
+✅ Immediate Generator
+[] ALU Control Unit
 []Memory
-[] Instruction Generator
-    ✅ I-Type
 []Other components
 
 # Types of Instructions
