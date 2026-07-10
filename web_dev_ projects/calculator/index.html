@@ -1,0 +1,71 @@
+<!--
+-a function that prevents entry of another decimal point once it has been added to the display once.
+For example, once you enter 3.14, you cant add another decimal point until you enter an operator such that (3.14159.3123) wont be possible to enter in the display
+- do this without the use of eval()(since, evall function is a security risk)a backspace button could be added,
+
+<button onclick="backSpace()" class="operator-btn"><</button> in html file
+
+function backSpace() {
+
+  display.value = display.value.slice(0, -1);
+}
+  - add option to switch between themes- aka colours
+  - try keeping the themes in different js files
+- typing numbers from keyboard shoulld also be accepted as an input
+- make the equal to button big enough to cover the empty space on it's right
+- make the clear option bigger to fill space
+- disable/replace empty buttons
+- add a backspace option
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--Calculator body-->
+    <div id="calculator">
+      <!--display screen-->
+      <input id="display" readonly>
+
+      <!--buttons-->
+      <!--create buttons and assign onclick functions to them-
+      i.e. display this/calculate
+      -->
+      <div id="buttons">
+        <button onclick="clearfunction()" class="operators">C</button>
+        <button></button>
+        <button></button>
+        <button onclick="Display('+')" class="operators">+</button>
+        <button onclick="Display('1')">1</button>
+        <button onclick="Display('2')">2</button>
+        <button onclick="Display('3')">3</button>
+        <button onclick="Display('-')" class="operators">-</button>
+        <button onclick="Display('4')">4</button>
+        <button onclick="Display('5')">5</button>
+        <button onclick="Display('6')">6</button>
+        <button onclick="Display('*')" class="operators">*</button>
+        <button onclick="Display('7')">7</button>
+        <button onclick="Display('8')">8</button>
+        <button onclick="Display('9')">9</button>
+        <button onclick="Display('/')" class="operators">/</button>
+        <button onclick="Display('%')">%</button>
+        <button onclick="Display('0')">0</button>
+        <button onclick="Display('.')">.</button>
+        <button onclick="calculate()" class="equalto">=</button>
+
+      </div>
+
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>

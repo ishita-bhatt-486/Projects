@@ -1,0 +1,47 @@
+body{
+    background-color: #000D26;
+    color: #7878F4;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header{
+    background-color: yellow;
+    font-size: 50px;
+    text-align: center;
+    font-family: "Sofia", sans-serif;
+}
+.addTasks{
+    background-color: green;
+}
+.newTaskContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.taskN{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: blue;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 10%;
+
+}
+.taskName{
+    text-align: left;
+}
+.main{
+    background-color: rgb(28, 103, 169);
+}
+#tasksContainer{
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+}
+.del{
+    background-color: transparent;
+}
+
+/*border colour= #031a2f*/

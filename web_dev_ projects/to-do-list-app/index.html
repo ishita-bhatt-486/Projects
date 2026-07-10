@@ -1,0 +1,65 @@
+
+<!--To-Do-List-->
+<!--future features:
+- add tooltips
+- form validation- avoid submiting empty tasks
+- reordering
+- confetti on finishing all tasks
+- add labels
+- sign in to save
+- motivational quote
+- sort by modes(priority(default), labels, 4 chambers), today-this month-some day, time blocking, etc.
+- 4 chambers= important most priority, less important least priority.., etc.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+</head>
+
+<body>
+    
+    <div class="header">
+        To-Do List
+    </div>
+
+    <!-- <div class="progress">
+        <div>
+            <div>Progress</div>
+            <div>0 out of 0 Tasks Completed</div>
+            add a function to determine if all tasks are completed- if so, change text content to All tasks completed
+        </div>
+        <div>Progress graph</div>
+    </div> 
+-->
+
+    <div class="newTaskContainer">
+
+        <input type="text" placeholder="Add Task" id="newTask">
+        <button id="newTaskButton">+</button><!--Add an image instead-->
+
+    </div>
+
+    <div class="main">
+        <div id="tasksContainer">
+<div class="taskN">
+            <input type="checkbox">
+            <!--in checkboxes, name is required only if you add a label with it-->
+            <div class="taskName">Task 1</div>
+            <!--<button class="edit">edit icon</button>-->
+            <button class="del"><img src="recycle-bin-icon.svg" alt="Delete Button" height="75%" width="35px"></button>
+        </div>
+        </div>
+    </div>
+
+<script src="index.js"></script>
+
+</body>
+
+</html>
+
